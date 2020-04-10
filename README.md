@@ -41,6 +41,14 @@ data/
 Please use the `SPEAKERS.TXT` supplied in the repo as I've made a few
 corrections to the one found at openslr.org.
 
+#### Libcudnn.so.7 error?
+This is a tensorflow-gpu related error. Tensorflow-gpu < 1.13.0 requires CUDA 9.0. You can follow the installation procedure on [tensorlow website](https://www.tensorflow.org/install/gpu). If you have the cuda version already installed, you should set the `$LD_LIBRARY_PATH`. 
+
+```
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+```
+
 #### Run tests
 
 This requires the LibriSpeech data.
